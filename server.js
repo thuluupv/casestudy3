@@ -69,6 +69,8 @@ io.sockets.on('connection', function (socket) {
         io.sockets.emit('updateusers', usernames);
         socket.broadcast.emit('updatechat', 'SERVER', socket.username + ' has disconnected');
         socket.leave(socket.room);
+        console.log(socket.room);
+        console.log(123);
     });
 });
 httpServer.listen(3000,()=>{
